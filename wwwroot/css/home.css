@@ -1,0 +1,23 @@
+#NamePlate {
+    width: 100%;
+    margin-bottom: 2%;
+}
+tbody {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#NamePlate td{
+    width: 50%;
+}
+#NamePlate h5{
+    text-align: right;
+}
+#events td{
+    width: 12.5%;
+}
+
+.center-it{
+    display: block;
+    margin: 0 auto;
+}

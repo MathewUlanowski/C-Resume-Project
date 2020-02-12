@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model EventCreate
+<div>
+    <h1>@Model.CurrentUser.UserName what would you like to do?</h1>
+    <form class="form-group" asp-action="EventHandler" method="Post">
+        <table>
+            <tr>
+                <td>Title <input class="form-control" type="text" asp-for="Event.Title"></td>
+                <td>
+                    Time <input class="form-control" type="time" name="ETime">
+                </td>
+            </tr>
+            <tr>
+                <td>Date <input class="form-control" type="date" asp-for="Event.Date"></td>
+                <td>
+                    Duration <input class="form-control" type="number" asp-for="Event.Duration">
+                </td>
+                <td>
+                    <select class="form-control" asp-for="Event.DurationIndicator">
+                        <option value="Hours">Hours</option>
+                        <option value="Minutes">Minutes</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <h6>Description</h6>
+        <textarea class="form-control" cols="48" rows="5" asp-for="Event.Description"></textarea>
+        <button type="submit">Create Activity</button>
+    </form>
+        <a href="/home"><button>Cancel</button></a>
+</div>

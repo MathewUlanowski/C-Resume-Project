@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+
+
+.controls{
+    float: right;
+    justify-content: end;
+}
+
+
+
+.RLheader{
+    width: 49%;
+    display: inline-block;
+}

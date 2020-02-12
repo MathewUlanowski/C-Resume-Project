@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+@model Event
+<head>
+    <link rel="stylesheet" href="/css/event.css">
+</head>
+<div>
+    <h1>Welcome to the Event Page</h1>
+    <h3 class="RLheader">@Model.Title</h3>
+    <div class="RLheader" >
+        <a href="/join/@Model.EventId"><Button class="controls">Join</Button></a>
+        <a href="/home"><Button class="controls">Home</Button></a>
+    </div>
+    <h3>Descriptions</h3>
+    <h5>Event Coordinator: @Model.Coordinator.UserName</h5>
+    <p>@Model.Description</p>
+    <h3>Participants:</h3>
+    <ul>
+        @{
+            foreach(var user in Model.Attendees)
+            {
+                <li>@user.User.UserName</li>
+            }
+        }
+    </ul>
+</div>

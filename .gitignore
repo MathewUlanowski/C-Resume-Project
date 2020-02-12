@@ -1,0 +1,5 @@
+obj
+bin
+Migrations
+.vscode
+appsettings.json

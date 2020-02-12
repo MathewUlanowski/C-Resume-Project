@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IndexModel
+
+<div>
+    <h1>Welcome to the Dojo Activity Center</h1>
+    <h6>Register</h6>
+    <span class="text-danger" asp-validation-for="IndexUser.UserName"></span>
+    <span class="text-danger" asp-validation-for="IndexUser.Email"></span>
+    <span class="text-danger" asp-validation-for="IndexUser.Password"></span>
+    <span class="text-danger" asp-validation-for="IndexUser.ConfirmPassword"></span>
+    <form class="from-group" action="RegistrationHandler" method="Post">
+        <!-- Name -->
+        <input class="form-control" type="text" asp-for="IndexUser.UserName">
+        <!-- email -->
+        <input class="form-control" type="text" asp-for="IndexUser.Email">
+        <!-- password -->
+        <input class="from-control" type="password" asp-for="IndexUser.Password">
+        <!-- confirm password -->
+        <input class="from-control" type="password" asp-for="IndexUser.ConfirmPassword">
+        <button type="submit">Register</button>
+    </form>
+    <h6>Login</h6>
+    <span class="text-danger" asp-validation-for="LoginModel.Email"></span>
+    <span class="text-danger" asp-validation-for="LoginModel.Password"></span>
+    <form class="form-group" action="LoginHandler" method="Post">
+        <input class="from-control" type="text" asp-for="LoginModel.Email">
+        <input class="from-control" type="password" asp-for="LoginModel.Password">
+        <button type="submit">Login</button>
+    </form>
+</div>
